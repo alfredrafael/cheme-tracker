@@ -12,7 +12,7 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Center for Continuous mRNA ManufacturingCenter for Continuous mRNA Manufacturing',
+        pageName: 'Center for Cont. mRNA',
         pageImage: '',
         pageUrl: 'https://rnacenter.mit.edu/',
         pageWebmaster: 'Unknownm'
@@ -60,7 +60,7 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Robert E. Cohen Research Group',
+        pageName: 'R.E. Cohen Research Group',
         pageImage: '',
         pageUrl: 'https://cohengroup.mit.edu/',
         pageWebmaster: 'Unknownm'
@@ -144,7 +144,7 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Coley Research Group (not ours)',
+        pageName: 'Coley Research Group (ours?)',
         pageImage: '',
         pageUrl: 'https://coley.mit.edu/',
         pageWebmaster: 'Unknownm'
@@ -168,7 +168,7 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Metabolic Engineering Laboratory',
+        pageName: 'Metabolic Engineering Lab',
         pageImage: '',
         pageUrl: 'https://stephanopouloslab.mit.edu/',
         pageWebmaster: 'Unknownm'
@@ -177,12 +177,6 @@ export const sitesData = [
         pageName: 'Arup K. Chakraborty Group',
         pageImage: '',
         pageUrl: 'https://chakrabortygroup.mit.edu/',
-        pageWebmaster: 'Unknownm'
-    },
-    {
-        pageName: '',
-        pageImage: '',
-        pageUrl: 'https://brushettresearchgroup.mit.edu/',
         pageWebmaster: 'Unknownm'
     }
 ];
