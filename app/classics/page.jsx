@@ -1,4 +1,3 @@
-import { FeedbackForm } from 'components/feedback-form';
 import { Markdown } from 'components/markdown';
 
 export const metadata = {
@@ -23,7 +22,6 @@ export default async function Page() {
         <>
             <h1 className="mb-8">Netlify Classics</h1>
             <Markdown content={explainer} className="mb-12" />
-            <div className="flex justify-center">{/* <FeedbackForm /> */}</div>
         </>
     );
 }
