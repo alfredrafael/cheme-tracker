@@ -1,13 +1,13 @@
 export const sitesData = [
     {
         pageName: 'ACCESS',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/access-e1744702946526.png',
         pageUrl: 'https://access.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'Ethics for Engineers',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/e4e-e1744702886839.png',
         pageUrl: 'https://e4e.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
@@ -19,7 +19,7 @@ export const sitesData = [
     },
     {
         pageName: 'DiSTAP',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/distap-e1744703008518.png',
         pageUrl: 'https://distap.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
