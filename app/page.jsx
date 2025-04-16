@@ -23,13 +23,13 @@ export default function Page() {
                 <meta name="description" content={`Page to keep track of all bugs`} />
             </Head>
 
-            <h1 className="px-10 mb-10">Our Webpages</h1>
+            {/* <h1 className="px-10 mb-10">Our Webpages</h1> */}
             <main className="flex flex-col items-center justify-center w-full">
-                <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-8 md:gap-y-8 gap-y-6">
+                <ul className="grid grid-cols-1 md:grid-cols-4 gap-x-8 md:gap-y-8 gap-y-6">
                     {allSites.length > 0 ? (
                         allSites.map((site, i) => (
                             <li key={i}>
-                                <Card sx={{ maxWidth: 345 }}>
+                                <Card sx={{ maxWidth: 345, borderRadius: '10px' }}>
                                     <div className="relative">
                                         {/* Dark overlay */}
                                         <div
@@ -54,19 +54,24 @@ export default function Page() {
                                         />
                                     </div>
                                     <div className="px-[.8rem] pt-4">
-                                        <h6 className="text-lg font-semibold pb-0">{site.pageName}</h6>
+                                        <div className="flex">
+                                            <h6 className="text-base font-semibold pb-0">{site.pageName}&nbsp;</h6>
+                                            <div className="flex-1 m-auto">
+                                                <hr className="" style={{ color: 'gray', marginLeft: '.2em' }} />
+                                            </div>
+                                        </div>
                                         {/* <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                                             Lizards are a widespread group of squamate reptiles, with over 6,000
                                             species, ranging across all continents except Antarctica
                                         </Typography> */}
                                     </div>
-                                    <CardActions sx={{ paddingBottom: '1rem' }}>
+                                    <CardActions sx={{ paddingBottom: '1rem', justifyContent: 'flex-start' }}>
                                         <Link href={site.pageUrl} target="_blank" rel="noopener noreferrer">
-                                            <Button size="small">See Comments</Button>
+                                            <Button size="small">Comments</Button>
                                         </Link>
 
                                         <Link href={site.pageUrl} target="_blank" rel="noopener noreferrer">
-                                            <Button size="small">Visit Page</Button>
+                                            <Button size="small">Page</Button>
                                         </Link>
                                     </CardActions>
                                 </Card>

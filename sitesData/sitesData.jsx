@@ -12,8 +12,8 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Center for Cont. mRNA',
-        pageImage: '',
+        pageName: 'Center for mRNA',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/mRna-e1744841186800.png',
         pageUrl: 'https://rnacenter.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
@@ -25,31 +25,31 @@ export const sitesData = [
     },
     {
         pageName: 'MLPDS',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/mlpds-e1744839804912.png',
         pageUrl: 'https://mlpds.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'D3BATT',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/d3batt-e1744830384187.png',
         pageUrl: 'https://d3batt.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'CENT',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/cent-e1744830735901.png',
         pageUrl: 'https://cent.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'AltHOST Industry Consortium',
-        pageImage: '',
+        pageName: 'AltHOST Consortium',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/althost.png',
         pageUrl: 'https://althost.mit.edu',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'HIP SAT',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/hipsat.png',
         pageUrl: 'https://hip-sat.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
@@ -60,26 +60,26 @@ export const sitesData = [
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'R.E. Cohen Research Group',
-        pageImage: '',
+        pageName: 'R.E. Cohen Group',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/Cohen-e1744839056489.png',
         pageUrl: 'https://cohengroup.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
-        pageName: 'Zachary Smith Research Lab',
-        pageImage: '',
+        pageName: 'Zachary Smith Lab',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/smith.png',
         pageUrl: 'https://smithlab.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'Prahter Lab',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/prather-e1744839960178.png',
         pageUrl: 'https://prathergroup.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
     {
         pageName: 'Hatton Research Group',
-        pageImage: '',
+        pageImage: 'http://www.alfredorafael.com/wp-content/uploads/2025/04/hatton-e1744702994808.png',
         pageUrl: 'https://hattongroup.mit.edu/',
         pageWebmaster: 'Unknownm'
     },
