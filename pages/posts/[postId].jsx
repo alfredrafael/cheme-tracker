@@ -70,20 +70,22 @@ export default function PostPage({ post }) {
               : "Post is part the following categories:"}
           </div>
           <div className="flex flex-wrap gap-2">
-            {post.category.map((category, index) => {
-              const categorySlug = isTranslated
-                ? post.spanishCategory[index]
-                : category;
-              return (
-                <Link
-                  key={index}
-                  href={`/categories/${encodeURIComponent(categorySlug)}`}
-                  className="text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition"
-                >
-                  {categorySlug}
-                </Link>
-              );
-            })}
+            {Array.isArray(post.category) && Array.isArray(post.spanishCategory)
+              ? post.category.map((category, index) => {
+                  const categorySlug = isTranslated
+                    ? post.spanishCategory[index]
+                    : category;
+                  return (
+                    <Link
+                      key={index}
+                      href={`/categories/${encodeURIComponent(categorySlug)}`}
+                      className="text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition"
+                    >
+                      {categorySlug}
+                    </Link>
+                  );
+                })
+              : null}
           </div>
         </section>
       </div>

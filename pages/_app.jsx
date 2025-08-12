@@ -22,9 +22,10 @@ function Application({ Component, pageProps }) {
       <LanguageProvider>
         <Navbar
           navItems={navItems}
-          bgColor={"#040182"}
-          dropDownBg={"#37358c"}
-          dropDownBgHover={"#222080"}
+          bgColor={"linear-gradient(to right, white, gray, gray)"}
+          dropDownBg={"#525252"}
+          dropDownBgHover={"#696969"}
+          showLanguageToggle={false}
         />
         <Component {...pageProps} />
         <Footer />

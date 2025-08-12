@@ -12,14 +12,11 @@ export default function SearchPage() {
   const { q } = useRouter().query;
   const term = (q || "").toLowerCase();
 
-  // now include tags in your filter
-  const results = postsData.filter((post) => {
-    const inTitle =
-      post.title.toLowerCase().includes(term) ||
-      post.spanishTitle.toLowerCase().includes(term);
-    const inTags = post.tags.some((t) => t.toLowerCase().includes(term));
-    return inTitle || inTags;
-  });
+  // Only filter by title
+  const results = postsData.filter(
+    (post) =>
+      typeof post.title === "string" && post.title.toLowerCase().includes(term)
+  );
 
   return (
     <main className="pageContainer">
@@ -44,22 +41,13 @@ export default function SearchPage() {
           {results.map((post) => (
             <li className="" tabIndex="-1" key={post.id}>
               <Link href={`/posts/${post.id}`}>
-                {!isTranslated ? (
-                  <PostCard2
-                    title={post.title}
-                    subtitle={post.subtitle}
-                    image={post.featuredImage}
-                    imagePosition="right"
-                    size="medium"
-                  />
-                ) : (
-                  <PostCard2
-                    title={post.spanishTitle}
-                    subtitle={post.spanishSubtitle}
-                    image={post.featuredImage}
-                    spansihTitle={post.spanishTitle}
-                  />
-                )}
+                <PostCard2
+                  title={post.title}
+                  subtitle={post.subtitle}
+                  image={post.featuredImage}
+                  imagePosition="right"
+                  size="medium"
+                />
               </Link>
             </li>
           ))}

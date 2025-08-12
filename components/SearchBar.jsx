@@ -13,12 +13,12 @@ export default function SearchBar({ noDropdown, placeholder = "Search..." }) {
   const router = useRouter();
   const containerRef = useRef();
 
-  // 1) compute title/spanishTitle suggestions
+  // 1) compute title-only suggestions
   const suggestions = query
-    ? postsData.filter((post) =>
-        [post.title, post.spanishTitle].some((str) =>
-          str.toLowerCase().includes(query.toLowerCase())
-        )
+    ? postsData.filter(
+        (post) =>
+          typeof post.title === "string" &&
+          post.title.toLowerCase().includes(query.toLowerCase())
       )
     : [];
 
@@ -112,11 +112,7 @@ export default function SearchBar({ noDropdown, placeholder = "Search..." }) {
                   router.push(`/posts/${post.id}`); // navigate to post
                 }}
               >
-                <span
-                  className={!isTranslated ? "text-gray-600" : "text-gray-500"}
-                >
-                  {!isTranslated ? post.title : post.spanishTitle}
-                </span>
+                <span className="text-gray-600">{post.title}</span>
               </li>
             ))}
           </ul>

@@ -7,27 +7,18 @@ const PostCard1 = ({ cardImage, cardTitle, cardText }) => {
   const fallbackImage = ""; // Fallback image
   return (
     <Card
-      className=""
+      className="shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 ease-in-out"
       variant="outlined"
       sx={{
         borderRadius: 4,
         border: 0.5,
-        overflow: "hidden", // Ensure the hover effect stays within the card
-        // boxShadow: 1, // Add some shadow for depth
-        ":hover": {
-          //   boxShadow: 6, // Increase shadow on hover for depth
-          transition: "all 0.3s ease-in-out", // Smooth transition for scaling and shadow
-          "& .card-media": {
-            filter: "grayscale(10%)", // Apply grayscale to the image when the card is hovered
-          },
-        },
+        overflow: "hidden",
       }}
     >
       <CardMedia
         className="card-media" // Add a class to target this element
         sx={{
           height: 140,
-          filter: "grayscale(80%)", // Default state: no grayscale
           transition: "filter 0.3s ease-in-out", // Smooth transition for grayscale
         }}
         image={cardImage || fallbackImage} // Use fallback if cardImage is missing

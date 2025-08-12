@@ -9,6 +9,7 @@ export default function Navbar({
   bgColor,
   dropDownBg,
   dropDownBgHover,
+  showLanguageToggle,
   navItems = {},
 }) {
   const [opacity, setOpacity] = useState(1);
@@ -59,7 +60,10 @@ export default function Navbar({
     <nav
       ref={dropdownRef}
       className="fixed top-0 left-0 right-0 z-50 bg-slate-800 transition-opacity duration-300"
-      style={{ opacity, backgroundColor: bgColor || "rgba(31, 41, 55, 0.8)" }}
+      style={{
+        opacity,
+        background: bgColor || "linear-gradient(to right, white, #750014)",
+      }}
     >
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex h-16 items-center justify-between">
@@ -68,12 +72,13 @@ export default function Navbar({
             <Link href="/" className="flex items-center">
               <Image
                 src={
-                  "http://www.alfredorafael.com/wp-content/uploads/2019/02/whileLogoName-e1551079673184.png"
+                  "http://www.alfredorafael.com/wp-content/uploads/2025/04/ChemE_Logo_Signature.png"
                 }
-                height={70}
-                width={70}
+                height={40}
+                width={40}
               />
             </Link>
+            ChemE
           </div>
 
           {/* Mobile Logo and Language Toggle */}
@@ -81,13 +86,13 @@ export default function Navbar({
             <Link href="/" className="flex items-center">
               <Image
                 src={
-                  "http://www.alfredorafael.com/wp-content/uploads/2019/02/whileLogoName-e1551079673184.png"
+                  "http://www.alfredorafael.com/wp-content/uploads/2025/04/ChemE_Logo_Signature.png"
                 }
-                height={70}
-                width={70}
+                height={40}
+                width={40}
               />
             </Link>
-            <LanguageToggle />
+            {showLanguageToggle && <LanguageToggle />}
           </div>
 
           {/* Desktop Nav */}
@@ -97,14 +102,14 @@ export default function Navbar({
                 <Link
                   key={path}
                   href={path}
-                  className="rounded-md px-3 py-2 text-lg font-medium font-serif text-white hover:text-white border border-transparent hover:border-gray-400 transition-colors "
+                  className="rounded-md px-3 py-2 text-lg font-medium text-white hover:text-white border border-transparent hover:border-gray-400 transition-colors "
                 >
                   {item.name}
                 </Link>
               ) : (
                 <div key={path} className="relative">
                   <button
-                    className="flex items-center rounded-md pl-3 py-2 text-lg font-medium font-serif text-white transition-colors border border-transparent hover:border-gray-400"
+                    className="flex items-center rounded-md pl-3 py-2 text-lg font-medium text-white transition-colors border border-transparent hover:border-gray-400"
                     onClick={() => toggleDropdown(path)}
                     aria-expanded={openDropdownKey === path}
                   >
@@ -135,7 +140,18 @@ export default function Navbar({
                           <Link
                             key={i}
                             href={sub.dropDownHref}
-                            className={`block px-4 py-2 text-lg font-serif text-white transition-colors hover:text-white hover:bg-[#323163]`}
+                            className="block px-4 py-2 text-lg text-white transition-colors hover:text-white"
+                            style={{
+                              backgroundColor:
+                                openDropdownKey === path && "transparent",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.backgroundColor =
+                                dropDownBgHover || "#323163";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.backgroundColor = "";
+                            }}
                             onClick={() => setOpenDropdownKey(null)}
                           >
                             {sub.dropdownName}
@@ -147,7 +163,7 @@ export default function Navbar({
                 </div>
               )
             )}
-            <LanguageToggle />
+            {showLanguageToggle && <LanguageToggle />}
           </div>
 
           {/* Mobile Menu Button */}
@@ -209,7 +225,7 @@ export default function Navbar({
               <Link
                 key={path}
                 href={path}
-                className="hover:text-white block rounded-md px-3 py-2 text-base font-medium font-serif text-white transition-colors hover:bg-slate-600"
+                className="hover:text-white block rounded-md px-3 py-2 text-base font-medium  text-white transition-colors hover:bg-slate-600"
                 onClick={closeMobileMenu}
               >
                 {item.name}
@@ -217,7 +233,7 @@ export default function Navbar({
             ) : (
               <div key={path} className="space-y-1">
                 <button
-                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium font-serif text-white transition-colors hover:bg-slate-600"
+                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-white transition-colors hover:bg-slate-600"
                   onClick={() => toggleMobileItem(path)}
                   aria-expanded={expandedMobileItem === path}
                 >
@@ -250,7 +266,11 @@ export default function Navbar({
                       <Link
                         key={i}
                         href={sub.dropDownHref}
-                        className="block rounded-md px-3 py-2 text-base font-medium font-serif text-slate-300 transition-colors hover:bg-slate-600 hover:text-white"
+                        className={`block rounded-md px-3 py-2 text-base font-medium font-serif text-slate-300 transition-colors hover:text-white ${
+                          dropDownBgHover
+                            ? `hover:bg-[${dropDownBgHover}]`
+                            : "hover:bg-slate-600"
+                        }`}
                         onClick={closeMobileMenu}
                       >
                         {sub.dropdownName}
