@@ -15,7 +15,7 @@ export const postsData = [
     pageWebmaster: "Unknownm",
   },
   {
-    id: "post-example-2",
+    id: "post-example-3",
     title: "Ethics for Engineers",
     featuredImage:
       "http://www.alfredorafael.com/wp-content/uploads/2025/04/e4e-e1744702886839.png",
